@@ -1,13 +1,17 @@
 import './App.css';
 // import DummyCarousel from './component/Dummy-carousel';
+
 // import ProgressBar from './component/ProgressBar';
+
 // import InfiniteScroll from './component/InfiniteScroll';
-// import Pagination from './component/Pagination';
+
 // import AutoComplete from './component/AutoComplete';
 
 // import Toaster from './component/Toaster/Toaster';
 
-import DummyAccordioan from './component/DummyAccordioan/DummyAccordioan';
+// import DummyAccordioan from './component/DummyAccordioan/DummyAccordioan';
+
+import Posts from './component/Pagination/Posts';
 
 function App() {
   return (
@@ -20,13 +24,14 @@ function App() {
 
       {/* <InfiniteScroll></InfiniteScroll> */}
 
-      {/* <Pagination></Pagination> */}
+      {/* pagination */}
+      <Posts></Posts>
 
       {/* <AutoComplete></AutoComplete> */}
 
       {/* <Toaster></Toaster> */}
 
-      <DummyAccordioan></DummyAccordioan>
+      {/* <DummyAccordioan></DummyAccordioan>*/}
     </div>
   );
 }

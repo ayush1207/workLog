@@ -1,8 +1,17 @@
-export default function Pagination(){
+export default function Pagination({pageNumber,setPageNumber}){
 
+    function next(){
+        setPageNumber((prevPage)=>prevPage+1);
+    }
+
+    function prev(){
+        setPageNumber((prevPage)=>prevPage-1);
+    }
     return (
-        <div>
-            
-        </div>
+        <divc className="pagination-container">
+            <div onClick={prev}>{"<"}</div>
+            <div>{pageNumber}</div>
+            <div onClick={next}>{">"}</div>
+        </divc>
     )
 }
