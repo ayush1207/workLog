@@ -1,0 +1,16 @@
+
+.infiniteScroll__parent{
+    .container{
+      margin : 6px;
+      display: flex;
+      flex-direction: column;
+      /* overflow-y : auto */
+  
+      img{
+        height : 250px;
+        width: 150px;
+        border-radius: 10px;
+        margin-block: 6px ;
+      }
+    }
+  }

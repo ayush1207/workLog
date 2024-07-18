@@ -1,0 +1,37 @@
+.carousel__parent {
+    .img_render_tag {
+      object-fit: contain;
+    }
+  
+    .carousel__parent-div {
+      position: absolute;
+      overflow: hidden;
+      height: 500px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .App {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+  
+    #image-render {
+      width: 500px;
+      margin-inline: 1rem;
+    }
+  
+    img {
+      height: 500px;
+      width: 100%;
+    }
+  
+    #left-button,
+    #right-button {
+      position: relative;
+      margin-block: auto;
+      font-size: 40px;
+    }
+  }

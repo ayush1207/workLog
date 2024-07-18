@@ -1,0 +1,17 @@
+.accordian-parent{
+    margin: 10px 20px;
+    max-width: 400px;
+    position: relative;
+
+    span{
+        position: absolute;
+        right: 25px;
+    }
+
+    div{
+        margin: 10px 20px;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 8px;
+    }
+}
