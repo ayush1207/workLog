@@ -1,35 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export default function Pagination({pageNumber,setPageNumber}){
-    let page;
-    let List = [];
-    useEffect(()=>{
-        page = {
-            prev : (pageNumber - 3  > 0) ? pageNumber - 3 :  1,
-            next : pageNumber + 3
+export default function Pagination({ pageNumber, setPageNumber }) {
+    let page = useRef(null);
+    let list = useRef([]);
+    useEffect(() => {
+        page.current = {
+            prev: (pageNumber - 3 > 0) ? pageNumber - 3 : 1,
+            next: pageNumber + 3
         }
-
-        for(let i=Math.min(page.prev,pageNumber);i<=page.next;i++){
-            List.push(i);
+        list.current = [];
+        for (let i = Math.min(page.current.prev, pageNumber); i <= page.current.next; i++) {
+            list.current.push(i);
         }
-    },[pageNumber]); 
+        console.log(list.current);
+    }, [pageNumber]);
 
-    function next(){
-        setPageNumber((prevPage)=>prevPage+1);
+    function next() {
+        setPageNumber((prevPage) => prevPage + 1);
     }
 
-    function prev(){
-        setPageNumber((prevPage)=>prevPage-1);
+    function prev() {
+        setPageNumber((prevPage) => prevPage - 1);
     }
     return (
-        <divc className="pagination-container">
+        <div className="pagination-container">
             <div onClick={prev}>{"<"}</div>
-            {
-                List.forEach(data => {
-                    return <div className={data == pageNumber ? 'active' : ''}>{data}</div>
-                })
-            }
+                    { list.current ? list.current.map(data => <span onClick={() => setPageNumber(data)} key={data} className={data === pageNumber ? 'active' : ''}>{data}</span>) : ''}
             <div onClick={next}>{">"}</div>
-        </divc>
+        </div>
     )
 }

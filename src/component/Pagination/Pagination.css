@@ -11,21 +11,32 @@
     }
   }
 
-  .pagination-container{
+  .pagination-container {
     width: 300px;
     display: flex;
     justify-content: space-evenly;
     margin-inline: auto;
-    margin-block : 20px;
-    div{
-        background-color: black;
-        color: white;
-        padding : 10px;
-        border-radius: 8px;
-        .active {
-            background-color: white;
-            color: black;
-        }
+    margin-block: 20px;
+    div {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      .active {
+        background-color: white;
+        color: black;
+      }
+    }
+    span {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .active {
+      background-color: white !important;
+      color: black !important;
+      border: 1px black solid;
     }
   }
 }
