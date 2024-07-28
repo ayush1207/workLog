@@ -13,7 +13,9 @@ import './App.css';
 
 // import Posts from './component/Pagination/Posts';
 
-import StepperParent from './component/Stepper/StepperParent';
+// import StepperParent from './component/Stepper/StepperParent';
+
+import VirtualScroll from './component/VirtualScroll/VirtualScroll';
 
 function App() {
   return (
@@ -36,7 +38,9 @@ function App() {
 
       {/* <DummyAccordioan></DummyAccordioan>*/}
 
-      <StepperParent></StepperParent>
+      {/* <StepperParent></StepperParent> */}
+
+      <VirtualScroll></VirtualScroll>
     </div>
   );
 }
