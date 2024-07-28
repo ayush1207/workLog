@@ -11,7 +11,9 @@ import './App.css';
 
 // import DummyAccordioan from './component/DummyAccordioan/DummyAccordioan';
 
-import Posts from './component/Pagination/Posts';
+// import Posts from './component/Pagination/Posts';
+
+import StepperParent from './component/Stepper/StepperParent';
 
 function App() {
   return (
@@ -25,13 +27,16 @@ function App() {
       {/* <InfiniteScroll></InfiniteScroll> */}
 
       {/* pagination */}
-      <Posts></Posts>
+
+      {/* <Posts></Posts> */}
 
       {/* <AutoComplete></AutoComplete> */}
 
       {/* <Toaster></Toaster> */}
 
       {/* <DummyAccordioan></DummyAccordioan>*/}
+
+      <StepperParent></StepperParent>
     </div>
   );
 }

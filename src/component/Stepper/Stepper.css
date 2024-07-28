@@ -1,0 +1,41 @@
+.stepperParent {
+  margin: 10px;
+  height: 500px;
+  width: 500px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 10px;
+  margin: 10px;
+}
+.col-3 {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.col-9 {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.stepps {
+  margin: 10px;
+}
+.value {
+  content: "";
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.stepperParent .row:not(:last-child) .col-3 .value:after {
+    content: "";
+    width: 1px;
+    height: 5em;
+    border-left: 2px dashed black;
+    margin-top: 26px;
+    margin-left: -4.8px;
+    position: absolute;
+}
